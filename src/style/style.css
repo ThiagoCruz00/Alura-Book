@@ -8,6 +8,10 @@
     padding: 25px;
 }
 
+.mobile {
+    display: none;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -216,18 +220,18 @@ input::placeholder {
     height: 24px;
 }
 
-.angular-content{
+.angular-content {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.angular-content > img{
+.angular-content>img {
     width: 155px;
     margin-bottom: 30px;
 }
 
-.angular-content > button{
+.angular-content>button {
     width: 155px;
     height: 70px;
     border-radius: 10px;
@@ -241,13 +245,13 @@ input::placeholder {
     transition: 0.3s ease-in-out;
 }
 
-.angular-content > button:hover{
+.angular-content>button:hover {
     background-color: var(--branco);
     border: 1px solid var(--amarelo);
     color: var(--amarelo);
 }
 
-.tecnologias{
+.tecnologias {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -256,7 +260,7 @@ input::placeholder {
     background: var(--degrade);
 }
 
-.tecnologias > h1{
+.tecnologias>h1 {
     text-align: center;
     font-size: 32px;
     font-weight: 500;
@@ -266,15 +270,15 @@ input::placeholder {
     margin-bottom: 40px;
 }
 
-.tecnologias-usadas{
+.tecnologias-usadas {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 
     padding-bottom: 65px;
 }
 
-.tecnologias-usadas > button{
+.tecnologias-usadas>button {
     width: 250px;
     height: 80px;
     border-radius: 20px;
@@ -288,12 +292,12 @@ input::placeholder {
     transition: 0.3s ease-in-out;
 }
 
-.tecnologias-usadas > button:hover{
+.tecnologias-usadas>button:hover {
     background-color: transparent;
     border: 1px solid var(--amarelo);
 }
 
-.cadastro{
+.cadastro {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -301,8 +305,8 @@ input::placeholder {
     padding-top: 60px;
 }
 
-.cadastro > input{
-    
+.cadastro>input {
+
     width: 325px;
     height: 50px;
     padding: 20px;
@@ -314,7 +318,7 @@ input::placeholder {
     color: var(--azul);
 }
 
-.cadastro > input::placeholder{
+.cadastro>input::placeholder {
     font-size: 16px;
     font-weight: 400;
     text-align: center;
@@ -324,12 +328,12 @@ input::placeholder {
     background-position: 15px;
 }
 
-.cadastro-text{
+.cadastro-text {
     width: 400px;
     margin-bottom: 60px;
 }
 
-.cadastro-text > h1{
+.cadastro-text>h1 {
     font-size: 28px;
     background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
     background-clip: text;
@@ -340,14 +344,14 @@ input::placeholder {
     margin-bottom: 20px;
 }
 
-.cadastro-text > p{
+.cadastro-text>p {
     color: var(--azul);
 
     font-weight: 300;
     font-size: 18px;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: space-evenly;
 
@@ -359,22 +363,22 @@ footer{
     padding-bottom: 60px;
 }
 
-.lista-rodapé{
+.lista-rodapé {
     display: flex;
     flex-direction: column;
     border-right: 1px solid var(--cinza);
     padding-right: 67px;
 }
 
-footer > :last-child{
+footer> :last-child {
     border: none;
 }
 
-.borda{
+.borda {
     border-left: 1px solid var(--cinza);
 }
 
-.lista-rodapé__item{
+.lista-rodapé__item {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -382,21 +386,237 @@ footer > :last-child{
 
 }
 
-.lista-rodapé__item > a{
+.lista-rodapé__item>a {
     color: var(--cinza);
 }
 
-.lista-rodapé__titulo{
+.lista-rodapé__titulo {
     font-size: 20px;
     color: var(--cinza);
 
     padding-bottom: 25px;
 }
 
-footer > h2{
+footer>h2 {
     font-weight: 400;
     font-size: 28px;
 
 }
 
 
+@media screen and (max-width: 600px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 20px;
+    }
+
+    .mobile-logo {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .mobile-logo>img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .mobile-compras {
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        gap: 24px;
+    }
+
+    .mobile-compras>a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .cabeçalho__menu-hamburguer {
+        width: 38px;
+        height: 38px;
+        display: inline-block;
+        background-image: url("../assets/img/Menu.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .lista-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 60vw;
+    }
+
+    .container__botao:checked~.lista-menu {
+        display: block;
+    }
+
+    .mobile {
+        background-color: var(--branco);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .lista-menu__titulo,
+    .lista-menu__item {
+        padding: 10px;
+        background-color: var(--branco);
+    }
+
+    .lista-menu__titulo {
+        color: var(--amarelo);
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .lista-menu__link {
+        background: var(--degrade);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .container__botao {
+        display: none;
+    }
+
+    .pesquisa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .pesquisa>h1 {
+        font-size: 23px;
+    }
+
+    .pesquisa>p {
+        font-size: 13px;
+    }
+
+    .pesquisa>input {
+        width: 345px;
+    }
+
+    .pesquisa>input::placeholder {
+        text-align: center;
+        background-position: 0px;
+    }
+
+    .lancamentos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .lancamentos>h1 {
+        font-size: 24px;
+    }
+
+    .lancamentos>main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        height: 560px;
+        padding: 0;
+    }
+
+    .swiper {
+        width: 100%;
+    }
+
+    .swiper-slide>img {
+        width: 100%
+    }
+
+    .swiper-pagination {
+        position: unset;
+        margin: 0;
+    }
+
+    .card {
+        width: 90%;
+
+        margin: 0;
+    }
+
+    .card-text>h2 {
+        font-size: 20px;
+    }
+
+    .angular-content>img {
+        width: 100px;
+        margin-bottom: 25px;
+    }
+
+    .angular-content>button {
+        width: 100%;
+        height: 23%;
+    }
+
+    .card-text>p {
+        font-size: 13px;
+        font-weight: 400;
+        padding-bottom: 10px;
+    }
+
+    .tecnologias-usadas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        padding-left: 20px;
+    }
+
+    .tecnologias-usadas > button{
+        width: 90%;
+        height: 50px;
+
+        font-size: 16px;
+    }
+
+    .cadastro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cadastro-text{
+        text-align: center;
+    }
+
+    footer{
+        padding: 0;
+        justify-content: unset;
+
+        padding-top: 20px;
+        padding-bottom: 100px;
+    }
+
+    .borda{
+        display: none;
+    }
+
+    .lista-rodapé{
+        display: none;
+    }
+}
